@@ -19,8 +19,13 @@ a:hover {
     img {
         width: 40px;
     }
+}
 
-    // div:first-child {
-    //     margin-right: 20px;
-    // }
+.svgAnchor:hover {
+    color: blue;
+}
+
+.dark {
+    color: white;
+    background-color: #161b22;
 }
