@@ -1,0 +1,12 @@
+.img {
+    width: 178px;
+    height: 240px;
+    box-shadow: -12px -9px 8px #000;
+}
+
+@media (max-width: 576px) {
+    .img {
+        width: 150px;
+        height: 200px;
+    }
+}

@@ -4,7 +4,7 @@ import HeaderContainer from './components/Header/HeaderContainer';
 import FooterContainer from './components/Footer/FooterContainer';
 import GenresListContainer from './Genres/GenresListContainer';
 import AuthorsListContainer from './Authors/AuthorsListContainer';
-import Content from './components/Content/Content';
+import ContentContainer from './components/Content/ContentContainer';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <div className="content-wrapper container-lg">
         <HeaderContainer />
         <Routes>
-          <Route path="/" element={<Content />} />
+          <Route path="/" element={<ContentContainer />} />
           <Route path="/genres" element={<GenresListContainer />} />
           <Route path="/authors" element={<AuthorsListContainer />} />
         </Routes>

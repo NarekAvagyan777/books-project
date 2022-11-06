@@ -1,9 +1,6 @@
 import { connect } from "react-redux";
 import AuthorsList from "./AuthorsList";
 
-const AuthorsListContainer = (props) => {
-    return <AuthorsList theme={props.theme} authors={props.authors} />
-}
 
 const mapStateToProps = (state) => {
     return {
@@ -15,4 +12,4 @@ const mapStateToProps = (state) => {
 export default connect(
     mapStateToProps, null
 )
-(AuthorsListContainer)
+(AuthorsList)

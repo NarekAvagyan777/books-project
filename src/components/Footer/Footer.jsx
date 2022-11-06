@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Footer.module.scss';
 
-export default function Footer(props) {
+export default function Footer({ theme }) {
   return (
-    <div className={`${styles.footer} ${props.theme === 'dark' ? styles.dark : ''} mt-1`}>
+    <div className={`${styles.footer} ${theme === 'dark' ? styles.dark : ''} mt-1`}>
         <div>
             <div className='fs-4 text-center' >Contacts</div>
             <div className='d-flex pb-2 justify-content-center align-items-center'>
