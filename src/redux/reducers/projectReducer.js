@@ -18,7 +18,7 @@ let initialState = {
         "FITZGERALD", "DOSTOEVSKY", "DOYLE", "MARTIN", "CAROLL"
     ],
     isFetching: false,
-    theme: 'light',
+    theme: false,
     works: [],
     genre: '',
     workId: ''
@@ -48,7 +48,10 @@ export default function projectReducer(state = initialState, action) {
 
 
 
-export const setTheme = (theme) => ({type: SET_THEME, theme});
+export const setTheme = (theme) => {
+    debugger;
+    return {type: SET_THEME, theme}
+};
 export const setWork = (payload) => ({type: SET_WORK, payload});
 export const setGenre = (genre) => ({type: SET_GENRE, genre});
 export const setWorkId = (workId) => ({type: SET_WORK_ID, workId});

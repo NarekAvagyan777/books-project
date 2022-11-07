@@ -11,7 +11,7 @@ export default function Content({ theme, works, isFetching, getWorksCreator, set
     }
   }, [])
 
-  return isFetching ? <Preloader /> : <div className={`${styles.content} d-flex flex-wrap pt-4 pb-5 ${theme === 'dark' ? styles.dark : ''}`}>
+  return isFetching ? <Preloader /> : <div className={`${styles.content} d-flex flex-wrap pt-4 pb-5 ${theme ? styles.dark : ''}`}>
         {
           works.map(el => <BookImage key={el.coverId} 
                                      coverId={el.coverId} 
