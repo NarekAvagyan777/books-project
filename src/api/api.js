@@ -4,8 +4,11 @@ const instance = axios.create({
     baseURL: 'https://openlibrary.org'
 })
 export const projectAPI = {
-    getWorks(id) {
-        return instance(`/works/${id}.json`)
+    getWork(workId) {
+        return instance.get(`/works/${workId}.json`)
             .then(res => res.data)
+    },
+    getWorksByAuthor(authorId) {
+        return instance.get(`/authors/${authorId}/works.json`)
     }
 }
