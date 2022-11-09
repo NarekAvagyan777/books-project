@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import GenresList from "./GenresList";
-import { setGenre } from "../redux/reducers/projectReducer";
+import { setGenre } from "../../redux/reducers/projectReducer";
 
 const mapStateToProps = (state) => {
     return {

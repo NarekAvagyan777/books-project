@@ -4,26 +4,27 @@ import styles from './Header.module.scss';
 import booksPng from '../../assets/images/books.png';
 
 export default function Header({ theme, setTheme }) {
-
   return (
-    <div className={`${styles.header} d-md-flex pt-2 pb-2 mb-1 align-items-center ${theme ? styles.dark : ''}`}>
-      <div className={`${styles.firstBlock} col-md-4 col-10 mb-md-0 mb-2 offset-1 offset-md-0 d-flex justify-content-center align-items-center`}>
-        <div className='me-4'>
+    <div className={`md:grid md:grid-cols-3 py-4 md:py-2 ${styles.header} ${theme ? styles.dark : ''}`}>
+      <div className={`flex items-center justify-center mb-3 md:mb-0 ${styles.firstBlock}`}>
+        <div className='mr-6'>
           <img src={booksPng} alt="books" />
         </div>
         <div>
-          <NavLink to="library" className='fs-4 fw-light' style={({ isActive }) => ({ color: isActive ? 'gold' : '' })}>Demo Library</NavLink>
+          <NavLink to="library" className='text-xl' style={({ isActive }) => ({ color: isActive ? 'gold' : '' })}>Demo Library</NavLink>
         </div>
       </div>
-      <div className='col-md-4 col-10 offset-1 offset-md-0 mb-md-0 mb-2'>
-        <div className='input-group'>
-          <input type="text" className="form-control fs-reset" placeholder='Search by book title or author'></input>
-          <a className="btn btn-primary" type="button">Search</a>
+
+      <div className='mb-3 md:mb-0 flex items-center justify-center'>
+        <div className='flex'>
+          <input type="text" className='pl-3 rounded-md rounded-r-none outline-0 h-9 w-56 md:w-40 lg:w-[220px] xl:w-64 2xl:w-72' placeholder='Search by book title or author'></input>
+          <button type="button" className='bg-blue-700 px-3 rounded-md text-white rounded-l-none'>Search</button>
         </div>
       </div>
-      <div className='col-md-4 col-10 offset-1 offset-md-0 d-flex align-items-center justify-content-center'>
-        <div className='col-8 d-flex justify-content-md-center justify-content-start align-items-center'>
-          <div className='me-4'>
+
+      <div className='w-72 mx-auto md:mx-0 flex md:items-center justify-between md:justify-center'>
+        <div className='flex md:ml-0 md:mr-12 lg:mr-16'>
+          <div className='mr-6'>
             <NavLink to="/genres" style={({ isActive }) => ({ color: isActive ? 'gold' : '' })}>Genres</NavLink>
           </div>
           <div>
@@ -31,8 +32,7 @@ export default function Header({ theme, setTheme }) {
           </div>
         </div>
 
-        <div className='col-4 d-flex justify-content-md-center justify-content-end align-items-center'>
-          
+        <div className=''>
           {
             theme ? <a className={styles.svgAnchor} onClick={() => setTheme(false)}>
               <svg width="25px" aria-hidden="true" data-prefix="fas" data-icon="sun" role="img" viewBox="0 0 512 512">
