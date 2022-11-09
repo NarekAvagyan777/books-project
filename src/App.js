@@ -12,7 +12,7 @@ function App() {
     <div className="app-wrapper">
       <div className="container mx-auto">
         <HeaderContainer />
-        {/* <Routes>
+        <Routes>
           <Route path="/" element={<ContentContainer />} />
           <Route path="/genres" element={<GenresListContainer />} />
           <Route path="/authors" element={<AuthorsListContainer />} />
@@ -20,7 +20,7 @@ function App() {
             <Route path=":bookId" element={<AuthorBooks />}/>
           </Route>
         </Routes>
-        <FooterContainer /> */}
+        <FooterContainer />
       </div>
     </div>
   );

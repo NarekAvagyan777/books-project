@@ -5,7 +5,7 @@ import booksPng from '../../assets/images/books.png';
 
 export default function Header({ theme, setTheme }) {
   return (
-    <div className={`md:grid md:grid-cols-3 py-4 md:py-2 ${styles.header} ${theme ? styles.dark : ''}`}>
+    <div className={`md:grid md:grid-cols-3 mb-1 py-4 md:py-2 ${styles.header} ${theme ? styles.dark : ''}`}>
       <div className={`flex items-center justify-center mb-3 md:mb-0 ${styles.firstBlock}`}>
         <div className='mr-6'>
           <img src={booksPng} alt="books" />

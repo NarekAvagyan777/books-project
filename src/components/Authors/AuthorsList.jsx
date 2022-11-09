@@ -4,10 +4,10 @@ import styles from './AuthorsList.module.scss';
 
 export default function AuthorsList({ theme, authors }) {
   return (
-    <div className={`d-flex flex-wrap pb-2 pt-2 ${styles.authorsWrapper} ${theme === 'dark' ? styles.dark : ''}`}>
+    <div className={`grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 pb-2 pt-2 ${styles.authorsWrapper} ${theme === 'dark' ? styles.dark : ''}`}>
         {
             authors.map(el => {
-                return <div className='col-md-4 col-sm-6 col-12 fw-semibold pt-3 pb-3 d-flex justify-content-center align-items-center'>
+                return <div className='font-semibold pt-3 pb-3 flex justify-center items-center'>
                     <NavLink>{el}</NavLink>
                 </div>
             })
