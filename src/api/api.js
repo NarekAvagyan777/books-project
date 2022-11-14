@@ -9,6 +9,11 @@ export const projectAPI = {
             .then(res => res.data)
     },
     getWorksByAuthor(authorId) {
-        return instance.get(`/authors/${authorId}/works.json`)
+        return instance.get(`${authorId}/works.json`)
+            .then(res => res.data)
+    },
+    getAuthorData(authorId) {
+        return instance.get(`${authorId}.json`)
+            .then(res => res.data)
     }
 }

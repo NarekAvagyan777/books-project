@@ -1,11 +1,11 @@
 import { connect } from "react-redux";
 import GenresList from "./GenresList";
-import { setGenre } from "../../redux/reducers/projectReducer";
+import { setGenre } from "../../redux/reducers/genresReducer";
 
 const mapStateToProps = (state) => {
     return {
-        theme: state.projectPage.theme,
-        genres: state.projectPage.genres
+        theme: state.appPage.theme,
+        genres: state.genresPage.genres
     }
 }
 

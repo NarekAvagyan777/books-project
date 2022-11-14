@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 const mapStateToProps = (state) => {
     return {
-        theme: state.projectPage.theme
+        theme: state.appPage.theme
     }
 }
 

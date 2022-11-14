@@ -1,16 +1,18 @@
 import { connect } from "react-redux";
 import Content from "./Content";
-import { getWorksCreator, setWorkId, setIsFetching } from "../../redux/reducers/projectReducer";
+import { getWorksCreator } from "../../redux/reducers/worksReducer";
+import { getAuthorData } from "../../redux/reducers/authorsReducer";
+
 
 const mapStateToProps = (state) => {
     return {
-        isFetching: state.projectPage.isFetching,
-        theme: state.projectPage.theme,
-        works: state.projectPage.works
+        isFetching: state.appPage.isFetching,
+        theme: state.appPage.theme,
+        works: state.worksPage.works
     }
 }
 
 export default connect(
-    mapStateToProps, { getWorksCreator, setWorkId, setIsFetching }
+    mapStateToProps, { getAuthorData, getWorksCreator }
 )
 (Content)

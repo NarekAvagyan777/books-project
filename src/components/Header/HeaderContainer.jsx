@@ -1,10 +1,10 @@
 import { connect } from "react-redux";
 import Header from "./Header";
-import { setTheme } from "../../redux/reducers/projectReducer";
+import { setTheme } from "../../redux/reducers/appReducer";
 
 const mapStateToProps = (state) => {
     return {
-        theme: state.projectPage.theme
+        theme: state.appPage.theme
     }
 }
 

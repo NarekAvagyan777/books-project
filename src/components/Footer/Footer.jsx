@@ -3,7 +3,7 @@ import styles from './Footer.module.scss';
 
 export default function Footer({ theme }) {
   return (
-    <div className={`mt-1 ${styles.footer} ${theme ? styles.dark : ''}`}>
+    <div className={`mt-3 ${styles.footer} ${theme ? styles.dark : ''}`}>
         <div>
             <div className='text-2xl text-center tracking-wide pb-2' >Contacts</div>
             <div className='flex pb-2 justify-center items-center'>

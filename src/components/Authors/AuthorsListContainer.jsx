@@ -4,8 +4,8 @@ import AuthorsList from "./AuthorsList";
 
 const mapStateToProps = (state) => {
     return {
-        theme: state.projectPage.theme,
-        authors: state.projectPage.authors
+        theme: state.appPage.theme,
+        authors: state.authorsPage.authors
     }
 }
 
