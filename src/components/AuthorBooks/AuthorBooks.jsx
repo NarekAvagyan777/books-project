@@ -1,16 +1,22 @@
-import React from 'react';
-import SelectedBook from '../SelectedBook/SelectedBook';
-import BookDescription from '../BookDescription/BookDescription';
+import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import AuthorWorksContainer from '../AuthorWorks/AuthorWorksContainer';
 import styles from './AuthorBooks.module.scss';
+import BookDescriptionContainer from '../BooksDescription/BookDescriptionContainer';
 
-export default function AuthorBooks({ authorName, authorPhotoId, works, getAuthorData }) {
+
+export default function AuthorBooks({ getAuthorData }) {
+
+  const { bookId } = useParams();
+
+  useEffect(() => {
+    getAuthorData(bookId)
+  }, [bookId])
 
   return (
     <div className={`${styles.wrapper} pt-8`}>
-      <div className='sm:grid sm:grid-cols-4 md:grid-cols-8'>
-        <SelectedBook works={works} />
-        <BookDescription authorName={authorName} authorPhotoId={authorPhotoId} works={works} getAuthorData={getAuthorData} />
-      </div>
+      <BookDescriptionContainer />
+      <AuthorWorksContainer />
     </div>
   )
 }

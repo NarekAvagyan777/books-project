@@ -1,7 +1,9 @@
 import { projectAPI } from "../../api/api";
 import { setIsFetching } from "./appReducer";
 
+
 const SET_WORK = 'SET_WORK';
+
 
 
 let initialState = {
@@ -33,6 +35,7 @@ export const getWorksCreator = () => (dispatch) => {
     let promise = Promise.allSettled(arr)
     promise.then(res => {
         res.forEach((el) => {
+            console.log(el);
             let workData = {
                 coverId: el.value?.covers && el.value.covers[0],
                 title: el.value.title,

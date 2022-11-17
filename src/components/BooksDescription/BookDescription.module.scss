@@ -1,20 +1,25 @@
 @media (max-width: 768px) {
-    .img {
+    .bookPhoto {
         width: 210px;
         height: 290px;
     }
 }
 
 @media (max-width: 576px) {
-    .img {
+    .bookPhoto {
         width: 180px;
         height: 260px;
     }
 }
 
 @media (min-width: 768px) {
-    .img {
+    .bookPhoto {
         width: 200px;
         height: 270px;
     }
+}
+
+.authorPhoto {
+    width: 160px;
+    border-radius: 10px;
 }

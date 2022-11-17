@@ -11,7 +11,7 @@ export default function Header({ theme, setTheme }) {
           <img src={booksPng} alt="books" />
         </div>
         <div>
-          <NavLink to="library" className='text-xl' style={({ isActive }) => ({ color: isActive ? 'gold' : '' })}>Demo Library</NavLink>
+          <NavLink to="/" className='text-xl' >Demo Library</NavLink>
         </div>
       </div>
 

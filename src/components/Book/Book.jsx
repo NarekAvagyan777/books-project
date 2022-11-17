@@ -9,7 +9,7 @@ export default function Book({ coverId, title, id }) {
   return (
     <div className='py-4 text-center'>
         <div>
-          <img className={styles.img} src={coverId ? `https://covers.openlibrary.org/b/id/${coverId}-L.jpg` : bookCover} alt="image" />
+          <img className={styles.img} src={coverId ? `https://covers.openlibrary.org/b/id/${coverId}-L.jpg` : bookCover} alt="Sorry, the image didn't upload properly" />
         </div>
         <div className='mt-3 font-semibold px-5'>
           <NavLink to={`/books/${id}`} >{title}</NavLink>

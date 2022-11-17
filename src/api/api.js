@@ -8,8 +8,8 @@ export const projectAPI = {
         return instance.get(`/works/${workId}.json`)
             .then(res => res.data)
     },
-    getWorksByAuthor(authorId) {
-        return instance.get(`${authorId}/works.json`)
+    getWorksByAuthor(authorId, limit=16) {
+        return instance.get(`${authorId}/works.json?limit=${limit}`)
             .then(res => res.data)
     },
     getAuthorData(authorId) {
