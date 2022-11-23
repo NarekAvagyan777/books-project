@@ -13,7 +13,9 @@ a:hover {
 .header {
     border-radius: 10px;
     background-color: #82b900;
-    box-shadow: 0 2px 4px #000;    
+    box-shadow: 0 2px 4px #000;
+    position: sticky;
+    top: 0
 }
 
 .firstBlock {
@@ -27,6 +29,9 @@ a:hover {
 }
 
 .dark {
-    color: white;
     background-color: #161b22;
+}
+
+.darkText {
+    color: white
 }

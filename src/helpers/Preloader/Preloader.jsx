@@ -1,10 +1,27 @@
-import React from 'react';
-import loader from '../../assets/images/loader_icon.gif';
+import React from 'react'
+import { connect } from 'react-redux'
+import styles from './Preloader.module.scss'
+import loader from '../../assets/images/loader.webp'
 
-export default function Preloader() {
+
+function Preloader({ theme }) {
   return (
-    <div style={{textAlign: 'center'}}>
-        <img style={{width: '250px'}} src={loader} alt="loader" />
+    <div className={`${theme ? styles.dark : ''} text-center`}>
+        <img className='w-[250px]' src={loader} alt="loader" />
     </div>
   )
 }
+
+
+
+
+const mapStateToProps = (state) => {
+  return {
+    theme: state.appPage.theme
+  }
+}
+
+export default connect(
+  mapStateToProps, null
+)
+(Preloader)

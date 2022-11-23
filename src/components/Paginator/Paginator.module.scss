@@ -1,0 +1,33 @@
+.wrapper {
+
+    div:first-child {
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    div:last-child {
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    div:hover {
+        background-color: #D2FCFC;
+    }
+
+    div {
+        background-color: white;
+    }
+
+    .active {
+        background-color: blue;
+    }
+
+    a {
+        color: black;
+    }
+
+    a:hover {
+        color: black;
+    }
+}
+

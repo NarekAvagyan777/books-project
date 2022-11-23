@@ -1,26 +1,39 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import HeaderContainer from './components/Header/HeaderContainer';
-import FooterContainer from './components/Footer/FooterContainer';
-import GenresListContainer from './components/Genres/GenresListContainer';
-import AuthorsListContainer from './components/Authors/AuthorsListContainer';
-import ContentContainer from './components/Content/ContentContainer';
-import AuthorBooksContainer from './components/AuthorBooks/AuthorBooksContainer';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import GenresList from './components/Genres/GenresList';
+import AuthorsList from './components/Authors/AuthorsList';
+import Content from './components/Content/Content';
+import BookInfo from './components/BookInfo/BookInfo';
+import SubjectWorks from './components/Genres/SubjectWorks/SubjectWorks';
+import SelectedAuthor from './components/Authors/SelectedAuthor/SelectedAuthor';
+import SearchResult from './components/SearchResult/SearchResult';
 
 function App() {
+
   return (
     <div className="app-wrapper">
       <div className="container mx-auto">
-        <HeaderContainer />
+        <Header />
+
         <Routes>
-          <Route path="/" element={<ContentContainer />} />
-          <Route path="/genres" element={<GenresListContainer />} />
-          <Route path="/authors" element={<AuthorsListContainer />} />
-          <Route path="/books" element={<AuthorBooksContainer />}>
-            <Route path=":bookId" element={<AuthorBooksContainer />}/>
+          <Route path="/" element={<Content />} />
+          
+          <Route path="genres" element={<GenresList />} />
+          <Route path="genres/:genre/:page" element={<SubjectWorks />} />
+          
+          <Route path="authors" element={<AuthorsList />} />
+          <Route path="authors/:author/:page" element={<SelectedAuthor />} />
+
+          <Route path="books" element={<BookInfo />}>
+            <Route path=":bookId" element={<BookInfo />} />
           </Route>
+
+          <Route path="search/:search/:page" element={<SearchResult />} />
         </Routes>
-        <FooterContainer />
+
+        <Footer />
       </div>
     </div>
   );
