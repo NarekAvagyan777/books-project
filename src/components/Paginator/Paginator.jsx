@@ -26,30 +26,30 @@ export default function Paginator() {
 
                     {
                         numbersArr.map((el, index) => (
-                            <div key={index} className={`${page == el ? styles.active : ''} border-2 w-[45px] h-[45px] border-1 flex justify-center items-center`}>
+                            <div key={index} className={`${page == el ? styles.active : ''} cursor-pointer border-2 w-[45px] h-[45px] border-1 flex justify-center items-center`}>
                                 <NavLink to={genre ? `/genres/${genre}/${el}` : author ? `/authors/${author}/${el}` : search ? `/search/${search}/${el}` : null}>{el}</NavLink>
                             </div>))
                     }
 
-                    <div className='border-2 w-[45px] h-[45px] border-1 flex justify-center items-center '>
+                    <div className='cursor-pointer border-2 w-[45px] h-[45px] border-1 flex justify-center items-center '>
                         <NavLink className='inline-flex items-center justify-center w-[100%] h-[100%]' to={genre ? `/genres/${genre}/${+page+1}` : author ? `/authors/${author}/${+page+1}` : search ? `/search/${search}/${+page+1}` : null}>&raquo;</NavLink>
                     </div>
 
                 </div>) : (
 
                 <div className={`flex ${styles.wrapper}`}>
-                    <div className='border-2 w-[45px] h-[45px] border-1 flex justify-center items-center'>
+                    <div className='cursor-pointer border-2 w-[45px] h-[45px] border-1 flex justify-center items-center'>
                         <NavLink className='inline-flex items-center justify-center w-[100%] h-[100%]' to={genre ? `/genres/${genre}/${+page-1}` : author ? `/authors/${author}/${+page-1}` : search ? `/search/${search}/${+page-1}` : null}>&laquo;</NavLink>
                     </div>
 
                     {
                         numbersArr.map((el, index) => (
-                            <div key={index} className={`${page == el ? styles.active : ''} border-2 w-[45px] h-[45px] border-1 flex justify-center items-center`}>
+                            <div key={index} className={`${page == el ? styles.active : ''} cursor-pointer border-2 w-[45px] h-[45px] border-1 flex justify-center items-center`}>
                                 <NavLink className='inline-flex items-center justify-center w-[100%] h-[100%]' to={genre ? `/genres/${genre}/${el}` : author ? `/authors/${author}/${el}` : search ? `/search/${search}/${el}` : null}>{el}</NavLink>
                             </div>))
                     }
 
-                    <div className='border-2 w-[45px] h-[45px] border-1 flex justify-center items-center'>
+                    <div className='cursor-pointer border-2 w-[45px] h-[45px] border-1 flex justify-center items-center'>
                         <NavLink className='inline-flex items-center justify-center w-[100%] h-[100%]' to={genre ? `/genres/${genre}/${+page+1}` : author ? `/authors/${author}/${+page+1}` : search ? `/search/${search}/${+page+1}` : null}>&raquo;</NavLink>
                     </div>
                 </div>

@@ -25,10 +25,10 @@ function SubjectWorks({ genreWorks, theme, getWorksBySubjectCreator, isFetching 
 
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 pt-4 pb-5">
       {
-        genreWorks?.map((el) => {
+        genreWorks?.map((el, index) => {
           return (
             <Book
-              key={el.coverId}
+              key={index}
               coverId={el.coverId}
               title={el.title}
               id={el.key}
