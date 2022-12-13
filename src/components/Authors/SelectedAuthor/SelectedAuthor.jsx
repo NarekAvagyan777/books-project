@@ -18,15 +18,15 @@ function SelectedAuthor({ authorSearchWorks, theme, isFetching, getWorksByAuthor
   return isFetching ? <Preloader /> : (
     <div className={`${theme ? styles.dark : ''} pb-4`}>
       <div className="text-center text-xl tracking-wider font-semibold py-8">
-        {author.toUpperCase()}
+        {author.split('+').join(' ').toUpperCase()}
       </div>
       
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 pt-4 pb-5'>
         {
-          authorSearchWorks?.map((el) => {
+          authorSearchWorks?.map((el, index) => {
             return (
               <Book
-                key={el.coverId}
+                key={index}
                 coverId={el.coverId}
                 title={el.title}
                 id={el.key}

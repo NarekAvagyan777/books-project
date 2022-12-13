@@ -11,9 +11,9 @@ function AuthorsList({ theme, authors }) {
       ${theme ? styles.dark : ""}`}
     >                                        
       {
-        authors.map((el) => {
+        authors.map((el, index) => {
           return (
-            <div className="font-semibold pt-3 pb-3 flex justify-center items-center">
+            <div key={index} className="font-semibold pt-3 pb-3 flex justify-center items-center">
               <NavLink to={`${el}/1`}>{el.toUpperCase()}</NavLink>
             </div>
           )

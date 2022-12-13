@@ -4,7 +4,6 @@ import styles from './Paginator.module.scss'
 
 export default function Paginator() {
   const { genre, author, search, page } = useParams()
-  console.log('genre', genre, 'author', author, 'search', search, 'page', page)
 
   let numbersArr = []
 
@@ -26,8 +25,8 @@ export default function Paginator() {
                 <div className={`flex ${styles.wrapper}`}>
 
                     {
-                        numbersArr.map((el) => (
-                            <div className={`${page == el ? styles.active : ''} border-2 w-[45px] h-[45px] border-1 flex justify-center items-center`}>
+                        numbersArr.map((el, index) => (
+                            <div key={index} className={`${page == el ? styles.active : ''} border-2 w-[45px] h-[45px] border-1 flex justify-center items-center`}>
                                 <NavLink to={genre ? `/genres/${genre}/${el}` : author ? `/authors/${author}/${el}` : search ? `/search/${search}/${el}` : null}>{el}</NavLink>
                             </div>))
                     }
@@ -44,8 +43,8 @@ export default function Paginator() {
                     </div>
 
                     {
-                        numbersArr.map((el) => (
-                            <div className={`${page == el ? styles.active : ''} border-2 w-[45px] h-[45px] border-1 flex justify-center items-center`}>
+                        numbersArr.map((el, index) => (
+                            <div key={index} className={`${page == el ? styles.active : ''} border-2 w-[45px] h-[45px] border-1 flex justify-center items-center`}>
                                 <NavLink className='inline-flex items-center justify-center w-[100%] h-[100%]' to={genre ? `/genres/${genre}/${el}` : author ? `/authors/${author}/${el}` : search ? `/search/${search}/${el}` : null}>{el}</NavLink>
                             </div>))
                     }

@@ -10,9 +10,9 @@ function GenresList({ theme, genres }) {
         styles.genresWrapper
       } ${theme ? styles.dark : ""}`}
     >
-      {genres.map((el) => {
+      {genres.map((el, index) => {
         return (
-          <div className="font-semibold pt-3 pb-3 flex justify-center items-center">
+          <div key={index} className="font-semibold pt-3 pb-3 flex justify-center items-center">
             <NavLink to={`${el}/1`}>{el.toUpperCase()}</NavLink>
           </div>
         )

@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './Book.module.scss'
 import bookCover from '../../assets/images/bookCover.jpg'
+import { useEffect } from 'react'
 
 export default function Book({ coverId, title, id }) {
 
